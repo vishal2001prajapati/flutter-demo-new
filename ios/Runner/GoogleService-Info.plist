@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1031876687799-9vphg3f47fbsr320hvdku73l18qauf8r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1031876687799-9vphg3f47fbsr320hvdku73l18qauf8r</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1031876687799-kt7db5k95pgiouf3abamf5pm24utdp95.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDIE_takQ1bpWZUNQddMydLKMAlsl-TQCM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1031876687799</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.untitled</string>
+	<key>PROJECT_ID</key>
+	<string>doogle-signin-demo</string>
+	<key>STORAGE_BUCKET</key>
+	<string>doogle-signin-demo.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1031876687799:ios:108bff4ed8deac771f1a32</string>
+</dict>
+</plist>
