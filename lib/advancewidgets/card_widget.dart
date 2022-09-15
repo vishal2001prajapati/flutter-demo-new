@@ -60,4 +60,3 @@ class _CardDemoState extends State<CardDemo> {
     );
   }
 }
-

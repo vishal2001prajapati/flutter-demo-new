@@ -1,6 +1,4 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:untitled/basicdemo/secondScreen.dart';
 import 'package:untitled/basicdemo/stack_view.dart';
 import 'package:untitled/basicdemo/typesOfButton.dart';
@@ -8,7 +6,6 @@ import 'package:untitled/form/radio_btn.dart';
 import 'package:untitled/provider/stream_provider.dart';
 import 'package:untitled/socialmeadiaintegreation/facebook_integration.dart';
 import 'package:untitled/socialmeadiaintegreation/google_integration.dart';
-import 'package:untitled/sqflite/screen/note_list.dart';
 
 import 'advancewidgets/Dashboard.dart';
 import 'advancewidgets/action_sheet.dart';
@@ -17,6 +14,7 @@ import 'advancewidgets/bottom_navigation.dart';
 import 'advancewidgets/bottom_sheet.dart';
 import 'advancewidgets/card_widget.dart';
 import 'advancewidgets/grid_view.dart';
+import 'advancewidgets/image_picker.dart';
 import 'advancewidgets/tab_bar.dart';
 import 'basicdemo/ImageDemo.dart';
 import 'basicdemo/RowWidgets.dart';
@@ -24,21 +22,20 @@ import 'basicdemo/SafeAreaExample.dart';
 import 'basicdemo/appbar_demo.dart';
 import 'basicdemo/columnWidgets.dart';
 import 'basicdemo/gesture_detector.dart';
+import 'firebase/firestore_demo.dart';
 import 'form/basic_form.dart';
 import 'listview/listview_demo.dart';
+import 'lottie_animation/animation.dart';
 import 'provider/changeNotifier_provider.dart';
 
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  /* WidgetsFlutterBinding.ensureInitialized();*/
 
-  await Firebase.initializeApp(
+/*  await Firebase.initializeApp();*/
+
+  /* await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-  );
-
+  );*/
 
   runApp(const MyApp());
 }
@@ -341,10 +338,34 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.all(2),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => NoteList()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FirebaseDemo()));
                     },
                     child: const Text("Firebase"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AnimationDemo()));
+                    },
+                    child: const Text("Lottie"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ImagePickerScreen()));
+                    },
+                    child: const Text("ImagePicker"),
                   )),
             ],
           ),
