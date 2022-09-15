@@ -15,6 +15,7 @@ import 'advancewidgets/bottom_sheet.dart';
 import 'advancewidgets/card_widget.dart';
 import 'advancewidgets/grid_view.dart';
 import 'advancewidgets/image_picker.dart';
+import 'advancewidgets/multiple_image_picker.dart';
 import 'advancewidgets/tab_bar.dart';
 import 'basicdemo/ImageDemo.dart';
 import 'basicdemo/RowWidgets.dart';
@@ -366,6 +367,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               builder: (context) => ImagePickerScreen()));
                     },
                     child: const Text("ImagePicker"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MultipleImagePicker()));
+                    },
+                    child: const Text("Multiple ImagePicker"),
                   )),
             ],
           ),
