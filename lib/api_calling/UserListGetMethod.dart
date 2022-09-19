@@ -7,6 +7,8 @@ void main() async {
   print('response code is:-->${response.statusCode}');
 }
 
+// Step-3 and step-4 is generate the .g.dart file
+
 class UserListGetMethod {
   int? page;
   int? perPage;

@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-
 import 'package:untitled/api_calling/api_client.dart';
 
 import 'UserListGetMethod.dart';
@@ -24,12 +23,14 @@ class _GetApiUserListState extends State<GetApiUserList> {
   }
 
   FutureBuilder<UserListGetMethod> _buildBody(BuildContext context) {
+    // step- 5
     final client = ApiClient(Dio(BaseOptions(contentType: "application/json")));
 
     return FutureBuilder<UserListGetMethod>(
         future: client.getUsers(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
+            // Step -6
             final List<Data>? posts = snapshot.data?.data;
             print('api data is:--->$posts');
 
@@ -51,8 +52,7 @@ class _GetApiUserListState extends State<GetApiUserList> {
           elevation: 4,
           child: ListTile(
             title: Text(item.firstName.toString()),
-            leading:
-                Image.network(item.avatar.toString()),
+            leading: Image.network(item.avatar.toString()),
             subtitle: Text(item.email.toString()),
           ),
         );
