@@ -172,12 +172,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   return Column(
                     children: [
                       ListTile(
+                        onTap: () {
+                          print('Click in:-$index');
+                        },
                           leading: CircleAvatar(
                             child: Text(products[index][0]),
                           ),
                           title: Text(products[index]),
                           subtitle: Text(productDetails[index]),
-                          trailing: Text(price[index].toString())),
+
+                          trailing: Text(price[index].toString())
+
+                      ),
                       Divider()
                     ],
                   );
