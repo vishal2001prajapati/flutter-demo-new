@@ -29,6 +29,8 @@ import 'firebase/firestore_demo.dart';
 import 'form/basic_form.dart';
 import 'listview/listview_demo.dart';
 import 'lottie_animation/animation.dart';
+import 'notification_demo/local_notification_service.dart';
+import 'notification_demo/notification.dart';
 import 'provider/changeNotifier_provider.dart';
 
 void main() async {
@@ -402,6 +404,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               builder: (context) => LoginAPICalling()));
                     },
                     child: const Text("Login API Calling"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NotificationDemo()));
+                    },
+                    child: const Text("Notification"),
                   )),
             ],
           ),
