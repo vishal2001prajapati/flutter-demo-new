@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/basicdemo/secondScreen.dart';
 import 'package:untitled/basicdemo/stack_view.dart';
@@ -34,12 +35,12 @@ import 'notification_demo/notification.dart';
 import 'provider/changeNotifier_provider.dart';
 
 void main() async {
-  /* WidgetsFlutterBinding.ensureInitialized();*/
-
-/*  await Firebase.initializeApp();*/
+   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 
   /* await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+   options: DefaultFirebaseOptions.currentPlatform,
+
   );*/
 
   runApp(const MyApp());

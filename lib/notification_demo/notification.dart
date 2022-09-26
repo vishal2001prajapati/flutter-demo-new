@@ -7,6 +7,7 @@ class NotificationDemo extends StatefulWidget {
 
   @override
   State<NotificationDemo> createState() => _NotificationDemoState();
+
 }
 
 class _NotificationDemoState extends State<NotificationDemo> {

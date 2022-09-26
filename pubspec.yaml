@@ -60,6 +60,8 @@ dependencies:
   flutter_local_notifications: ^9.6.0
   timezone:
   rxdart:
+  flutter_bloc: ^8.1.1
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
