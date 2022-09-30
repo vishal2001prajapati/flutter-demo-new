@@ -26,11 +26,11 @@ class _CardDemoState extends State<CardDemo> {
                 children: [
                   Stack(
                     children: [
-                      Image.asset(
+                    /*  Image.asset(
                         'assets/image/image_demo.jpg',
                         fit: BoxFit.contain,
                         width: double.infinity,
-                      ),
+                      ),*/
                       const Positioned(
                         bottom: 16,
                         left: 16,

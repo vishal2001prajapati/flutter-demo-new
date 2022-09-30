@@ -20,6 +20,7 @@ class _NavigationPanelState extends State<TabBarDemo> {
           automaticallyImplyLeading: false,
           title: Text('TabBar'),
           bottom: TabBar(
+
             tabs: [
               Tab(text: "Home", icon: Icon(Icons.home)),
               Tab(text: "Star", icon: Icon(Icons.star)),
