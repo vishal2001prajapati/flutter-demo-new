@@ -16,8 +16,24 @@ class _MultipleImagePickerState extends State<MultipleImagePicker> {
 
   void selectImages() async {
     final List<XFile>? selectImages = await imagePicker.pickMultiImage();
+    final List<XFile>? selecVi = (await imagePicker.pickVideo(
+        source: ImageSource.gallery)) as List<XFile>?;
+
     if (selectImages!.isNotEmpty) {
       imageFilterList!.addAll(selectImages);
+    }
+    /*if (selecVi!.isNotEmpty) {
+      imageFilterList!.addAll(selecVi);
+    }*/
+    setState(() {});
+  }
+  void selectVideo() async {
+
+    final List<XFile>? selecVi = (await imagePicker.pickVideo(
+        source: ImageSource.gallery)) as List<XFile>?;
+
+    if (selecVi!.isNotEmpty) {
+      imageFilterList!.addAll(selecVi);
     }
     setState(() {});
   }
@@ -34,7 +50,8 @@ class _MultipleImagePickerState extends State<MultipleImagePicker> {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  selectImages();
+                /*  selectImages();*/
+                  selectVideo();
                 },
                 child: const Text('Pick Images From Gallery')),
             SizedBox(

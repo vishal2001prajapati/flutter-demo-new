@@ -5,18 +5,23 @@ import 'package:untitled/basicdemo/stack_view.dart';
 import 'package:untitled/basicdemo/typesOfButton.dart';
 import 'package:untitled/form/radio_btn.dart';
 import 'package:untitled/provider/stream_provider.dart';
+import 'package:untitled/search/searchbar_.dart';
 import 'package:untitled/socialmeadiaintegreation/facebook_integration.dart';
 import 'package:untitled/socialmeadiaintegreation/google_integration.dart';
-
 import 'advancewidgets/Dashboard.dart';
 import 'advancewidgets/action_sheet.dart';
 import 'advancewidgets/alert_dialog.dart';
 import 'advancewidgets/bottom_navigation.dart';
 import 'advancewidgets/bottom_sheet.dart';
 import 'advancewidgets/card_widget.dart';
+import 'advancewidgets/demo_sliver.dart';
 import 'advancewidgets/grid_view.dart';
 import 'advancewidgets/image_picker.dart';
 import 'advancewidgets/multiple_image_picker.dart';
+import 'advancewidgets/simple_file_pick.dart';
+import 'advancewidgets/sliverapp_bar.dart';
+import 'advancewidgets/swipe.dart';
+import 'advancewidgets/swipeable_card.dart';
 import 'advancewidgets/tab_bar.dart';
 import 'api_calling/get_method_api_calling.dart';
 import 'api_calling/login_api/login_api_calling.dart';
@@ -416,6 +421,61 @@ class _MyHomePageState extends State<MyHomePage> {
                               builder: (context) => NotificationDemo()));
                     },
                     child: const Text("Notification"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SwipeCardDemo()));
+                    },
+                    child: const Text("card"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SwipeableCard()));
+                    },
+                    child: const Text("SwipeableCard"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SliverAppDemo()));
+                    },
+                    child: const Text("SliverAppDemo"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DemoSliverAppBar()));
+                    },
+                    child: const Text("DemoSliverAppBar"),
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SearchItem()));
+                    },
+                    child: const Text("SearchItem"),
                   )),
             ],
           ),

@@ -2,6 +2,15 @@ import 'dart:collection';
 
 // ignore: prefer_function_declarations_over_variables
 main() {
+
+  var ids = [1, 4, 4, 4, 5, 6, 6];
+  var distinctIds = ids.toSet().toList();
+  List jj = distinctIds;
+  print('distinctIds -> ${jj}');
+
+
+
+
   List<int> demoList = [1, 2, 3, 4];
   List<int> emptyList = [];
   emptyList.addAll(demoList);
